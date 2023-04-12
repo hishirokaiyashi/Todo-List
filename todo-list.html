@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo-list</title>
+    <link rel="stylesheet" href="/Todo-list/todo.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <section class="todolist-container">
+        <div class="todolist-container-detail">
+            <h1 class="todolist-title">TODO - LIST</h1>
+            <div class="todolist-container-main">
+                <div class="todolist-container-top">
+                    <div class="todolist-container-top-detail">
+                        <input type="text" autofocus="autofocus" id="todolist-input-add"
+                            class="todolist-input-add todolist-input-add-hidden" placeholder="Add task" />
+                        <button class="todolist-button-add ">
+                            <span class="todolist-icon-add">
+                                <i class="fa-solid fa-plus"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="todolist-container-middle">
+                    <div class="dashboard-info-list">
+                        <span class="dashboard-info-name">Task</span>
+                        <span id="dashboard-info-list-name" class="dashboard-info-value"></span>
+                    </div>
+                    <div class="dashboard-info-list">
+                        <span class="dashboard-info-name">Task Done</span>
+                        <span id="dashboard-info-done" class="dashboard-info-value"></span>
+                    </div>
+                    <div class="dashboard-info-list-delete">
+                        <span class="dashboard-info-name"><i class="fa-solid fa-trash"></i></span>
+                        <span class="dashboard-info-value">Tasks</span>
+                    </div>
+                </div>
+                <div class="todolist-container-bottom">
+                    <div class="pending-container">
+                        <h2 class="pending-title">Pending Tasks</h2>
+                        <ul id="pending-list-tasks" class="pending-list-tasks"></ul>
+                    </div>
+                    <div class="done-container">
+                        <h2 class="done-title">Done Tasks</h2>
+                        <ul id="done-list-tasks" class="done-list-tasks"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="overlay">
+            <div id="edit-popup">
+            <label for="" class="title-edit">Edit Task</label>
+              <textarea id="edit-input"></textarea>
+              <div class="btn-edit-container">
+                <button id="save-button">Save</button>
+                <button id="close-button">Close</button>
+              </div>
+            </div>
+          </div>
+    </section>
+    <script type="text/javascript" src="todolist.js"></script>
+</body>
+
+</html>
